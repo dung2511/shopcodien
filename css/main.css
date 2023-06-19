@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: LatoExtraBold;
+  src: url("../fonts/Lato/Lato-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: LatoMediumItalic;
+  src: url("../fonts/Lato/Lato-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: LatoMedium;
+  src: url("../fonts/Lato/Lato-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: LatoSemiBold;
+  src: url("../fonts/Lato/Lato-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: LatoBold;
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: LatoRegular;
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+.font-LatoMediumItalic {
+  font-family: LatoMediumItalic, sans-serif;
+}
+.font-LatoExtraBold {
+  font-family: LatoExtraBold, sans-serif;
+}
+.font-LatoSemiBold {
+  font-family: LatoSemiBold, sans-serif;
+}
+.font-LatoMedium {
+  font-family: LatoMedium, sans-serif;
+}
+.font-LatoBold {
+  font-family: LatoBold, sans-serif;
+}
+.font-LatoRegular {
+  font-family: LatoRegular, sans-serif;
+}
+.header_menu ul {
+  display: flex;
+  gap: 2.5rem;
+}
+@media only screen and (min-width: 1536px) {
+  .header_menu ul {
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .header_menu ul {
+    display: block;
+  }
+  .header_menu ul li {
+    padding: 1rem;
+  }
+  .header_menu {
+    transition: 0.7s;
+    transform: translateX(100%);
+  }
+  .header_menu_mobile_show {
+    transform: translateX(0%);
+    transition: 0.7s;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  .header_menu ul {
+    gap: 1rem;
+  }
+}
+.header_nav {
+  flex: 1;
+}
+.header_menu ul li:nth-child(1),
+.header_menu ul li:nth-child(2) {
+  display: none;
+}
+@media only screen and (max-width: 639px) {
+  .header_menu ul li:nth-child(1),
+  .header_menu ul li:nth-child(2) {
+    display: block;
+  }
+  .header_menu ul li:nth-child(1) a,
+  .header_menu ul li:nth-child(2) a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .header_menu ul li:nth-child(1) {
+    background: rgba(0, 113, 220, 0.05);
+    color: var(--brandblue-color);
+  }
+  .header_menu ul li:nth-child(2) {
+    background: var(--brandorange-color);
+    color: white;
+  }
+}
+:root {
+  --brandorange-color: #ff7a01;
+  --brandblue-color: #0071dc;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.swiper-slide {
+  height: auto;
+  width: fit-content !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper-grid-column > .swiper-wrapper {
+  flex-direction: row !important;
+}
+.swiper-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 320px) {
+  .swiper {
+    width: 90%;
+    height: calc((100% - 30px) / 3);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.pro-outstanding {
+  transition: 0.3s;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  background: white;
+}
+@media screen and (max-width: 640px) {
+  .section-search__form .select-container {
+    width: 9.5rem;
+    font-size: 0.875rem;
+  }
+  .search-drawings_items {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .section-search__form .select-container {
+    width: 7rem;
+    font-size: 0.875rem;
+  }
+  .search-drawings_items {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+.prd-osd__img img {
+  width: 100%;
+}
+.nav_drawings ul,
+.nav_document ul {
+  display: flex;
+  gap: 0.5rem;
+}
+.nav_drawings ul li a,
+.nav_document ul li a {
+  padding: 0.5rem 1rem;
+  transition: 0.3s;
+}
+.nav_drawings li a.tab-active,
+.nav_document li a.tab-active {
+  border-bottom: 1px solid var(--brandblue-color);
+  color: var(--brandblue-color);
+}
+.nav_drawings ul li a:hover,
+.nav_drawings ul li a.tab-active,
+.nav_document ul li a:hover,
+.nav_document ul li a.tab-active {
+  border-bottom: 1px solid var(--brandblue-color);
+  color: var(--brandblue-color);
+}
+.tab-osd-content,
+.tab-document-content {
+  display: none;
+  animation-duration: 0.3s;
+}
+.tab-osd-content.tab-active,
+.tab-document-content.tab-active {
+  display: block;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
